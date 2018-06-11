@@ -151,9 +151,6 @@ var reportForm = (function() {
 			$(".loader").hide();
 		},1000)
 		
-		let height = localStorage.getItem("footHeight")+"px"||"51px";
-		console.log(height)
-		$(".footer").css("height",height);
 		
 	}
 	return {

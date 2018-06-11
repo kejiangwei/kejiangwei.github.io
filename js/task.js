@@ -58,9 +58,7 @@ var task = (function () {
 		setTimeout(function(){
 			$(".loader").hide();
 		},1000)
-		let height = $(".footer").height()
-		localStorage.setItem("footHeight",height)
-		console.log(height)
+
 		
 		
 	}
