@@ -46,7 +46,7 @@ var reportForm = (function() {
 		        {
 		            name:'访问来源',
 		            type:'pie',
-		            radius: ['25%', '45%'],
+		            radius: ['15%', '35%'],
 		
 		            data:[
 		                {value:600, name:'本期新收款'+" "+parseInt(600/(400+600)*100)+"%"},
@@ -151,7 +151,7 @@ var reportForm = (function() {
 			$(".loader").hide();
 		},1000)
 		
-		let height = sessionStorage.getItem("footHeight")+"px"||"51px";
+		let height = localStorage.getItem("footHeight")+"px"||"51px";
 		console.log(height)
 		$(".footer").css("height",height);
 		

@@ -59,7 +59,7 @@ var task = (function () {
 			$(".loader").hide();
 		},1000)
 		let height = $(".footer").height()
-		sessionStorage.setItem("footHeight",height)
+		localStorage.setItem("footHeight",height)
 		console.log(height)
 		
 		
