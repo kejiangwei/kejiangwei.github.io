@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>报表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/mui.picker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet/less" type="text/css" href="css/reportForm.less" />
+	</head>
+
+	<body>
+		<div class="mui-content reportForm">
+			<div class="reportFormBox">
+				<div class="headerBox">
+					<ul>
+						<li><img class="selectTime" src="img/annet_rili_green.png" alt="时间" /></li>
+						<li class="openRankings"><span>龙津镇</span><img src="img/annet_zhankai_black.png" alt="展开" /></li>
+						<li><img class="openSendReport" src="img/annet_dian_black.png" alt="点" /><input class="sendReportForm" style="display: none;" type="button" name="" id="" value="发送报表" /></li>
+					</ul>
+				</div>
+				<div class="reportFormCon">
+					<ul>
+						<li>
+							<div class="title">
+								<span>执行率</span>
+								<i>26.3%</i>
+							</div>
+							<div class="echartsImages" id="implementationRate">
+
+							</div>
+						</li>
+						<li>
+							<div class="title">
+								<span>执行率</span>
+								<i>26.3%</i>
+							</div>
+							<div class="echartsImages" id="harvestRatio">
+
+							</div>
+						</li>
+						<li>
+							<div class="title">
+								<span>执行率</span>
+								<i>26.3%</i>
+							</div>
+							<div class="assessment">
+								<ul>
+									<li>
+										<span>联系被执行人并配合法院做思想工作</span>
+										<i>0分</i>
+									</li>
+									<li>
+										<span>配和法院对其实施司法拘留</span>
+										<i>0分</i>
+									</li>
+									<li>
+										<span>协助法院查找被执行人有效财产线索</span>
+										<i>0分</i>
+									</li>
+									<li>
+										<span>见证及对被执行人采取有关惩戒措施</span>
+										<i>0分</i>
+									</li>
+									<li>
+										<span>执结案件</span>
+										<i>0分</i>
+									</li>
+									<li>
+										<span>执结律</span>
+										<i>0分</i>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer">
+				<ul>
+					<li><img src="img/annet_task_black.png" />
+						<a href="task.html">任务</a>
+					</li>
+					<li><img src="img/annet_report_form_red.png" />
+						<a href="javascript:;" class="active">报表</a>
+					</li>
+					<li><img src="img/annet_my_black.png" />
+						<a href="personal.html">我的</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--发送报表-->
+			<div class="sendReportFormBox undis">
+				<div class="header">
+					<h2>
+		      <a class="back" href="#" id="sendReportForm_back_reportForm"></a>
+		      发送报表到邮箱
+		    </h2>
+				</div>
+
+				<ul>
+
+					<li>
+						<input type="text" name="codeValue" id="codeValue" value="" placeholder="邮箱地址" />
+					</li>
+					<li>
+						<input type="button" name="codeSumbit" id="codeSumbit" value="发送" />
+					</li>
+				</ul>
+			</div>
+
+			<!--地区排行-->
+			<div class="rankingsBox undis">
+				<ul>
+					<li><b><img src="img/annet_medal_belt01.png" alt="01"/></b><span>龙津镇</span><i>29</i></li>
+					<li><b><img src="img/annet_medal_belt02.png" alt="02"/></b><span>石壁镇</span><i>12</i></li>
+					<li><b><img src="img/annet_medal_belt03.png" alt="03"/></b><span>东阳镇</span><i>8</i></li>
+					<li><b>4</b><span>黄州镇</span><i>5</i></li>
+					<li><b>5</b><span>长彭镇</span><i>4</i></li>
+					<li><b>6</b><span>乔乐镇</span><i>4</i></li>
+					<li><b>7</b><span>鼎湖镇</span><i>3</i></li>
+					<li><b>8</b><span>万彭镇</span><i>3</i></li>
+					<li><b>9</b><span>新明乡</span><i>2</i></li>
+					<li><b>10</b><span>长均乡</span><i>1</i></li>
+				</ul>
+			</div>
+		</div>
+		<!--动态加载效果-->
+		<div class="loader">
+			<img src="img/ball-triangle.svg" width="50" alt="">
+		</div>
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.picker.min.js"></script>
+	<script src="js/less.min.js"></script>
+	<script src="js/echarts.js"></script>
+
+	<script src="js/reportForm.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		//		选择查询时间
+		$(".selectTime").on("click", function() {
+			var dtpicker = new mui.DtPicker({
+				type: "month", //设置日历初始视图模式 
+				beginDate: new Date(2015, 04), //设置开始日期 
+				endDate: new Date(2016, 04), //设置结束日期 
+				
+			})
+			dtpicker.show(function(e) {
+				console.log(e);
+			})
+		})
+
+	</script>
+
+</html>

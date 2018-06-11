@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_697310_ab3dbnx1elsdcxr.css" />
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet/less" type="text/css" href="css/personal.less" />
+		<script src="js/fontAuto.js"></script>
+
+	</head>
+
+	<body>
+		<div class="personal wrap" id="personal">
+			<div class="personalBox">
+				<ul>
+					<li class="userInfo">
+						<div class="userHeadImg">
+							<img src="img/annet_my_black.png" class="undis"/>
+							<span>志勇</span>
+						</div>
+						<div class="userName">
+							<span>张志勇</span>
+							<i>编辑资料</i>
+						</div>
+						<img class="userSet" id="userSet" src="img/annet_setting-black.png" alt="设置"/>
+					</li>
+					<li class="browseRecords">
+						<div>
+							<img src="img/annet_read_red.png"/>
+							<span>浏览记录</span>
+						</div>
+					</li>
+					<li class="mui-table-view-cell messagePush">
+						<span>消息推送</span>
+						<i>开启或关闭消息推送</i>
+						<div class="mui-switch mui-switch-blue mui-switch-mini mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+					<li class="scavengingCaching" onclick="personal.scavengingCaching()">
+						<span>清除缓存</span>
+					</li>
+					<li class="feedback">
+						<span>意见反馈</span>
+						<i>有宝贵的意见或者建议，欢迎反馈给我们</i>
+					</li>
+				</ul>
+			</div>
+			
+			
+			<div class="footer">
+			    <ul>
+			      <li><img src="img/annet_task_black.png"/><a href="task.html">任务</a></li>
+			      <li><img src="img/annet_report_form_black.png"/><a href="ReportForm.html">报表</a></li>
+			      <li><img src="img/annet_my_red.png"/><a class="active" href="javascript:;">我的</a></li>
+			    </ul>
+			</div>
+			<!--提交反馈-->
+			<div class="feedbackBox undis">
+				<div class="header">
+					<h2>
+				      <a class="back" href="javascript:;" id="feedback_back_personal"></a>
+				      提交反馈
+				    </h2>
+				</div>
+				<ul>
+					<li>
+						<textarea name="" rows="" cols="" placeholder="请填写反馈意见"></textarea>
+					</li>
+					<li>
+						<input type="button" name="feedbackSumbit" id="feedbackSumbit" value="提交" />
+					</li>
+				</ul>
+			</div>
+			
+			<!--浏览记录-->
+			<div class="browseRecordsBox undis">
+				<div class="header">
+					<h2>
+		      <a class="back" href="javascript:;" id="browseRecords_back_personal"></a>
+		      浏览记录
+		    </h2>
+				</div>
+				<p class="noHasBrowseRecords">没有记录</p>
+				
+				
+			</div>
+			
+			<!--设置-->
+			<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="login.html">注销</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;" id="modify">修改密码</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			
+			<!--修改密码-->
+			<div class="modifyBox undis">
+				<div class="header">
+					<h2>
+		      <a class="back" href="#" id="modify_back_personal"></a>
+		      重置密码
+		    </h2>
+				</div>
+				<ul>
+					<li>
+						<input type="password" name="modifyPwd" id="modifyPwd" value="" placeholder="输入新密码" />
+					</li>
+					<li>
+						<input type="password" name="modifyPwdSure" id="modifyPwdSure" value="" placeholder="确认密码" />
+					</li>
+					<li>
+						<input type="button" name="modifySumbit" id="modifySumbit" value="确认" />
+					</li>
+				</ul>
+			</div>
+			
+			
+		</div>
+		<!--动态加载效果-->
+		<div class="loader">
+			<img src="img/ball-triangle.svg" width="50" alt="">
+		</div>
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/less.min.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/personal.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		
+	</script>
+
+</html>

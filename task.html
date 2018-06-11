@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>任务</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_697310_ab3dbnx1elsdcxr.css" />
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet/less" type="text/css" href="css/task.less" />
+		<script src="js/fontAuto.js"></script>
+
+	</head>
+
+	<body>
+		<div class="task wrap" id="task">
+			<div class="taskBox">
+				<div class="tabHeader">
+					<ul>
+						<li><span class="active" data-href="info">消息</span></li>
+						<li><span data-href="organTask">机关任务</span></li>
+						<li><span data-href="myTask">我的任务</span></li>
+						<li><span data-href="historyTask">历史任务</span></li>
+					</ul>
+					<img class="addTask" src="img/annet_add_black.png" alt="添加" />
+				</div>
+				<div class="tabHeaderList">
+					<!--消息-->
+					<div class="info" id="info">
+						<span class="noHasContainer">没有内容</span>
+					</div>
+
+					<!--机关任务-->
+					<div class="organTask undis" id="organTask">
+						<span class="noCons undis">没有内容</span>
+						<div class="taskHeader">
+							<span class="allOrgans">全部机关</span><span class="allCases">所有案件</span>
+						</div>
+						<div class="tackContainers">
+							<ul class="tackContainersList">
+								<li>
+									<img src="img/annet_my_black.png" class="undis" />
+									<span class="tackContainersListImg">志勇</span>
+									<ul>
+										<li>
+											<span>洛阳</span>
+											<i>2018-01-28</i>
+											<b class="have_in_hand">执行中</b>
+										</li>
+										<li>
+											<span>被通报人</span>
+											<i>了卓吾</i>
+										</li>
+										<li>
+											<span>通报人</span>
+											<i>刘德荣</i>
+										</li>
+										<li>
+											<span>金额:</span><i>15.33万</i>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<img src="img/annet_my_black.png" class="undis" />
+									<span class="tackContainersListImg">志勇</span>
+									<ul>
+										<li>
+											<span>洛阳</span>
+											<i>2018-01-28</i>
+											<b class="have_in_hand">执行中</b>
+										</li>
+										<li>
+											<span>被通报人</span>
+											<i>了卓吾</i>
+										</li>
+										<li>
+											<span>通报人</span>
+											<i>刘德荣</i>
+										</li>
+										<li>
+											<span>金额:</span><i>15.33万</i>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<img src="img/annet_my_black.png" class="undis" />
+									<span class="tackContainersListImg">志勇</span>
+									<ul>
+										<li>
+											<span>洛阳</span>
+											<i>2018-01-28</i>
+											<b class="have_in_hand">执行中</b>
+										</li>
+										<li>
+											<span>被通报人</span>
+											<i>了卓吾</i>
+										</li>
+										<li>
+											<span>通报人</span>
+											<i>刘德荣</i>
+										</li>
+										<li>
+											<span>金额:</span><i>15.33万</i>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<img src="img/annet_my_black.png" class="undis" />
+									<span class="tackContainersListImg">志勇</span>
+
+									<ul>
+										<li>
+											<span>洛阳</span>
+											<i>2018-01-28</i>
+											<b class="completed">已完结</b>
+										</li>
+										<li>
+											<span>被通报人</span>
+											<i>了卓吾</i>
+										</li>
+										<li>
+											<span>通报人</span>
+											<i>刘德荣</i>
+										</li>
+										<li>
+											<span>金额:</span><i>15.33万</i>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--我的任务-->
+					<div class="myTask undis" id="myTask">
+						<span class="noHasContainer">没有内容</span>
+					</div>
+
+					<!--历史任务-->
+					<div class="historyTask undis" id="historyTask">
+						<ul class="tackContainersList">
+							<li>
+								<img src="img/annet_my_black.png" class="undis" />
+								<span class="tackContainersListImg">志勇</span>
+								<ul>
+									<li>
+										<span>洛阳</span>
+										<i>2018-01-28</i>
+										<b class="completed">已完结</b>
+									</li>
+									<li>
+										<span>被通报人</span>
+										<i>了卓吾</i>
+									</li>
+									<li>
+										<span>通报人</span>
+										<i>刘德荣</i>
+									</li>
+									<li>
+										<span>金额:</span><i>15.33万</i>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<img src="img/annet_my_black.png" class="undis" />
+								<span class="tackContainersListImg">志勇</span>
+								<ul>
+									<li>
+										<span>洛阳</span>
+										<i>2018-01-28</i>
+										<b class="completed">已完结</b>
+									</li>
+									<li>
+										<span>被通报人</span>
+										<i>了卓吾</i>
+									</li>
+									<li>
+										<span>通报人</span>
+										<i>刘德荣</i>
+									</li>
+									<li>
+										<span>金额:</span><i>15.33万</i>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<img src="img/annet_my_black.png" class="undis" />
+								<span class="tackContainersListImg">志勇</span>
+								<ul>
+									<li>
+										<span>洛阳</span>
+										<i>2018-01-28</i>
+										<b class="completed">已完结</b>
+									</li>
+									<li>
+										<span>被通报人</span>
+										<i>了卓吾</i>
+									</li>
+									<li>
+										<span>通报人</span>
+										<i>刘德荣</i>
+									</li>
+									<li>
+										<span>金额:</span><i>15.33万</i>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<img src="img/annet_my_black.png" class="undis" />
+								<span class="tackContainersListImg">志勇</span>
+
+								<ul>
+									<li>
+										<span>洛阳</span>
+										<i>2018-01-28</i>
+										<b class="completed">已完结</b>
+									</li>
+									<li>
+										<span>被通报人</span>
+										<i>了卓吾</i>
+									</li>
+									<li>
+										<span>通报人</span>
+										<i>刘德荣</i>
+									</li>
+									<li>
+										<span>金额:</span><i>15.33万</i>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="footer">
+				<ul>
+					<li><img src="img/annet_task_red.png" />
+						<a href="javascript:;" class="active">任务</a>
+					</li>
+					<li><img src="img/annet_report_form_black.png" />
+						<a href="ReportForm.html">报表</a>
+					</li>
+					<li><img src="img/annet_my_black.png" />
+						<a href="personal.html">我的</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--发起任务-->
+			<div class="launchTaskBox undis">
+				<div class="header">
+					<h2>
+		      <a class="back" href="#" id="launchTask_back_task"></a>
+		      发起任务
+		    </h2>
+				</div>
+				<div class="form">
+
+					<ul>
+						<li>
+							<label for="name">执行案号</label>
+							<input type="text" name="name" id="name" value="" placeholder="请输入执行案号(必填)" />
+						</li>
+						<li class="selectValue setUpCaseTime" data-options='{"type":"month"}'>
+							<label for="name">立案时间</label>
+							<span>2018-06-09</span>
+							<i class="open_close"></i>
+						</li>
+						<li>
+							<label for="tel">申请执行人</label>
+							<input type="tel" name="tel" id="tel" value="" placeholder="请输入申请执行人(必填)" />
+						</li>
+						<li>
+							<label for="tel">被执行人</label>
+							<input type="tel" name="tel" id="tel" value="" placeholder="请输入被执行人(必填)" />
+						</li>
+						<li class="selectValue selectSex"> 
+							<label for="name">性别</label>
+							<span>男</span>
+							<i class="open_close"></i>
+						</li>
+						<li>
+							<label for="tel">住址</label>
+							<input type="tel" name="tel" id="tel" value="" placeholder="请输入住址(非必填)" />
+						</li>
+						<li>
+							<label for="tel">身份证号</label>
+							<input type="tel" name="tel" id="tel" value="" placeholder="选填" />
+						</li>
+						<li>
+							<label for="tel">联系电话</label>
+							<input type="tel" name="tel" id="tel" value="" placeholder="选填" />
+						</li>
+						<li class="selectValue CaseReason">
+							<label for="name">案由</label>
+							<input type="text" readonly="readonly" name="" id="" value="" placeholder="请选择(必填)" />
+							<i class="open_close"></i>
+						</li>
+
+						<li>
+							<label for="tel">执行标的金额(万元)</label>
+							<input type="tel" name="tel" id="tel" value="" placeholder="请输入金额(必填)" />
+						</li>
+
+						<li class="selectValue WorkingGroup">
+							<label for="name">工作组负责人</label>
+							<input type="text" readonly="readonly" name="" id="" value="" placeholder="请选择(必填)" />
+							<i class="open_close"></i>
+						</li>
+
+						<li class="selectValue TownshipSupervisor">
+							<label for="name">乡镇督办人</label>
+							<!--<span>请选择(必填)</span>-->
+							<input type="text" readonly="readonly" name="" id="" value="" placeholder="请选择(必填)" />
+							<i class="open_close"></i>
+						</li>
+					</ul>
+
+					<div class="sumbit">
+						<input type="button" name="registerSumbit" id="registerSumbit" value="提交" />
+					</div>
+				</div>
+			</div>
+
+			<!--查看任务-->
+			<div class="seeTaskBox undis">
+				<div class="seeTaskBoxTop">
+					<img class="back" id="seeTask_back_task" src="img/annet_nav_back_write.png" />
+					<img class="tel" id="dialing" src="img/annet_tel_write.png" />
+					<!--<a href="wtai://wp/mc;4000061500">400-00-61500</a>-->
+				</div>
+				<div class="seeTaskBoxInfo">
+					<div class="seeTaskBoxInfoTab">
+						<ul>
+							<li class="active" data-href="essentialInformation">基本信息</li>
+							<li data-href="detailedInformation">详细信息</li>
+							<li data-href="evaluate">评价</li>
+						</ul>
+						<div class="seeTaskBoxInfoHead">
+							<img src="img/annet_my_black.png" class="undis" />
+							<span>志勇</span>
+						</div>
+					</div>
+
+					<div class="seeTaskBoxInfoTabCon">
+						<!--基本信息-->
+						<ul class="essentialInformation">
+							<li>
+								<span>徐伟</span><i>执行中</i>
+							</li>
+							<li>
+								<span>法院负责人</span><i>虚伪</i>
+							</li>
+							<li>
+								<span>乡镇负责人</span><i>胸瑞昌</i>
+							</li>
+							<li>
+								<span>当前执行人</span><i>执行中</i>
+							</li>
+							<li>
+								<span>金额</span><b>1.18万</b>
+							</li>
+						</ul>
+
+						<!--详细信息-->
+						<ul class="detailedInformation undis">
+							<li><span>执行案号</span><i>(2018)赣0123执211号</i></li>
+							<li><span>案由</span><i>民间借款纠纷</i></li>
+							<li><span>申请执行人</span><i>图限制</i></li>
+							<li><span>被执行人</span><i>浏阳</i></li>
+							<li><span>被执行人地址</span><i>将下村降下组</i></li>
+							<li><span>被执行人身份证号</span><i>13811728446</i></li>
+							<li><span>被执行人联系电话</span><i>13811728446</i></li>
+						</ul>
+
+						<!--评价-->
+						<ul class="evaluate undis">
+							<li><span>结果评价</span><i>未评价</i></li>
+							<li><span>态度评价</span><i>未评价</i></li>
+							<li><span>效率评价</span><i>未评价</i></li>
+						</ul>
+					</div>
+				</div>
+
+				<!--反馈情况-->
+				<div class="feedbackSituation">
+					<div class="title">
+						<span>反馈情况</span>
+					</div>
+					<div class="step">
+						<ul>
+							<li class="active">
+								<i></i>
+								<div class="titleTime">
+									<p>任务收到评论</p>
+									<span>2018-04-23</span>
+								</div>
+								<span>张三结束了任务</span>
+								<div class="feedbackSituationImg">
+
+								</div>
+							</li>
+							<li>
+								<i></i>
+								<div class="titleTime">
+									<p>任务收到评论</p>
+									<span>2018-04-23</span>
+								</div>
+								<span>张三结束了任务</span>
+								<div class="feedbackSituationImg">
+
+								</div>
+							</li>
+							<li>
+								<i></i>
+								<div class="titleTime">
+									<p>任务收到评论</p>
+									<span>2018-04-23</span>
+								</div>
+								<span>张三结束了任务</span>
+								<div class="feedbackSituationImg">
+
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--动态加载效果-->
+		<div class="loader">
+			<img src="img/ball-triangle.svg" width="50" alt="">
+		</div>
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/less.min.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.picker.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/task.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+
+		//		立案时间
+		$('.setUpCaseTime').on("click", function() {
+			var dtpicker = new mui.DtPicker({
+				type: "date", //设置日历初始视图模式 
+				beginDate: new Date(2015, 04, 25), //设置开始日期 
+				endDate: new Date(2016, 04, 25), //设置结束日期 
+			})
+			dtpicker.show(function(e) {
+				console.log(e);
+				$('.setUpCaseTime>span').text(e.text)
+			})
+		})
+		
+//		性别选择
+		$(".selectSex").on("click", function() {
+			let data = [{
+				value: "1",
+				text: "男"
+			}, {
+				value: "2",
+				text: "女"
+			}]
+			pickerSelect(data)
+			
+		})
+		
+		
+		//		案由   工作组负责人   乡镇组督办人
+		$(".CaseReason,.WorkingGroup,.TownshipSupervisor").on("click", function() {
+			let data = [{
+				value: "first",
+				text: "第一项"
+			}, {
+				value: "second",
+				text: "第一项"
+			}, {
+				value: "third",
+				text: "第三项"
+			}, {
+				value: "fourth",
+				text: "第四项"
+			}, {
+				value: "fifth",
+				text: "第五项"
+			}]
+			
+			pickerSelect(data)
+		})
+		
+
+		//		全部机关   所有案件
+		$(".allCases,.allOrgans").on("click", function() {
+			let data = [{
+				value: "first",
+				text: "第一项"
+			}, {
+				value: "second",
+				text: "第一项"
+			}, {
+				value: "third",
+				text: "第三项"
+			}, {
+				value: "fourth",
+				text: "第四项"
+			}, {
+				value: "fifth",
+				text: "第五项"
+			}]
+			
+			pickerSelect(data)
+		})
+		
+		function pickerSelect(valueData){
+			var picker = new mui.PopPicker();
+			picker.setData(valueData)
+			picker.pickers[0].setSelectedValue('fourth', 2000);
+			picker.show(function(SelectedItem) {
+				console.log(SelectedItem);
+				return SelectedItem;
+			})
+		}
+		
+	</script>
+
+</html>

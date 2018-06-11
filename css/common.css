@@ -1,0 +1,67 @@
+body {
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  color: #717171;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dd, dt, input, button, select {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+img {
+  border: 0;
+}
+
+select, input, button {
+  font-family: '微软雅黑';
+}
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  color: #007b91;
+  text-decoration: none;
+  outline: none;
+}
+.undis {
+	display: none
+}
+input, textarea,select{
+  border:0;
+  -webkit-appearance: none;
+}
+/*清除浏览器输入框的默认填充的黄色背景*/
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+
+/*input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #bfbfbf;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #bfbfbf;
+}*/
+

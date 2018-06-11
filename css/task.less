@@ -1,0 +1,350 @@
+//****************************任务界面样式
+@import "common";
+.task {
+    .outerDiv;
+    background: #fff;
+    .taskBox {
+        .tabHeader {
+            height: 2.6rem;
+            width: 100%;
+            overflow: hidden;
+            line-height: 2.6rem;
+            border-bottom: 0.01rem solid #ddd;
+            ul {
+                .HW100;
+                position: relative;
+                li {
+                    display: inline-block;
+                    span {
+                        margin: 0 1rem 0 0;
+                        display: inline-block;
+                        height: 2.6rem;
+                    }
+                    span.active {
+                        color: #AE4036;
+                        border-bottom: 0.1rem solid #AE4036;
+                    }
+                    &:nth-child(1) {
+                        span {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+            img.addTask {
+                position: absolute;
+                top: 0.7rem;
+                width: 1.2rem;
+                right: 0.5rem;
+                cursor: pointer;
+            }
+        }
+        .tabHeaderList {
+            div {
+                span.noHasContainer {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .taskHeader {
+                height: 2.4rem;
+                width: 100%;
+                line-height: 2.4rem;
+                padding: 0 1rem;
+                border-bottom: 0.01rem solid #ddd;
+                span {
+                    cursor: pointer;
+                    &:nth-child(2) {
+                        float: right;
+                    }
+                }
+
+            }
+        }
+        .tackContainersList {
+            li {
+                height: 6rem;
+                width: 100%;
+                border-bottom: 0.01rem solid #ddd;
+
+                span.tackContainersListImg {
+                    height: 2.4rem;
+                    width: 2.4rem;
+                    background: #0091EA;
+                    display: block;
+                    border-radius: 50%;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 2.4rem;
+                    font-size: 0.75rem;
+                    margin: 0.5rem;
+                    text-indent: 0.2rem;
+                    letter-spacing: 0.2rem;
+                    float: left;
+                }
+                ul {
+                    width: calc(100% - 3.4rem);
+                    height: 100%;
+                    display: inline-block;
+                    float: right;
+                    padding: 0.5rem 0.5rem 0.5rem 0;
+                    li {
+                        height: 1rem;
+                        border-bottom: 0;
+                        font-size: 0.6rem;
+                        line-height: 1rem;
+                        i {
+                            display: block;
+                            font-style: normal;
+                            font-size: 0.6rem;
+                            float: right;
+                        }
+                        &:nth-child(4) {
+                            text-align: right;
+                            font-weight: 600;
+                            margin-top: 0.2rem;
+                        }
+                        &:nth-child(1) {
+                            height: 2rem;
+                            position: relative;
+                            border-bottom: 0.01rem solid #ddd;
+                            span {
+                                font-size: 0.7rem;
+                                display: block;
+                            }
+                            i {
+                                display: block;
+                                font-style: normal;
+                                font-size: 0.6rem;
+                                float: left;
+                            }
+                            b {
+                                position: absolute;
+                                top: 0.3rem;
+                                right: 0;
+                                font-weight: 400;
+                                font-size: 0.65rem;
+                            }
+                            b.have_in_hand {
+                                color: #EEA53F;
+                            }
+                            b.completed {
+                                color: #3A9FCE;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .launchTaskBox {
+        .outerDiv;
+        background: #ededed;
+        div.form {
+            height: calc(100% - 2.4rem);
+            width: 100%;
+            overflow: auto;
+            margin-top: 0.4rem;
+            li {
+            }
+        }
+    }
+
+    .seeTaskBox {
+        .seeTaskBoxTop {
+            height: 8rem;
+            width: 100%;
+            overflow: hidden;
+            background: #1D9CB9;
+            position: relative;
+            img.back {
+                position: absolute;
+                top: 0.6rem;
+                left: 0.6rem;
+                width: 1rem;
+            }
+            img.tel {
+                position: absolute;
+                top: 0.6rem;
+                right: 0.6rem;
+                width: 0.8rem;
+            }
+        }
+        .seeTaskBoxInfo {
+            height: 12.6rem;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 6.6rem;
+            left: 0;
+            border-bottom: 1rem solid #ededed;
+            .seeTaskBoxInfoTab {
+                height: 1.4rem;
+                width: 100%;
+                ul {
+                    width: 75%;
+                    height: 1.4rem;
+                    line-height: 1.4rem;
+                    color: #fff;
+                    z-index: 2;
+                    float: right;
+                    li {
+                        display: inline-block;
+                        color: #fff;
+                        width: calc(100%/3);
+                        text-align: center;
+                        height: 100%;
+                        float: left;
+                    }
+                    li.active {
+                        border-bottom: 0.1rem solid #fff;
+                    }
+                }
+                .seeTaskBoxInfoHead {
+                    width: 25%;
+                    height: 100%;
+                    float: left;
+                    span {
+                        height: 2.8rem;
+                        width: 2.8rem;
+                        background: #0091EA;
+                        display: block;
+                        border-radius: 50%;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 2.4rem;
+                        font-size: 0.7rem;
+                        text-indent: 0.2rem;
+                        letter-spacing: 0.2rem;
+                        z-index: 4;
+                        border: 0.2rem solid #fff;
+                        margin-left: calc(50% - 1.4rem);
+                    }
+                }
+            }
+
+            .seeTaskBoxInfoTabCon {
+                margin-top: 1.6rem;
+                ul {
+                    padding: 0 1rem;
+                    li {
+                        height: 1.2rem;
+                        line-height: 1.2rem;
+                        width: 100%;
+                        i {
+                            float: right;
+                            font-style: normal;
+                            font-size: 0.6rem;
+                        }
+                        span {
+                            font-size: 0.6rem;
+                        }
+                        &:nth-child(1) {
+                            height: 2rem;
+                            line-height: 2rem;
+                            i {
+                                font-size: 0.7rem;
+                            }
+                            span {
+                                font-size: 0.8rem;
+                            }
+                        }
+                        &:last-child {
+                            b {
+                                font-weight: 600;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+                ul.detailedInformation,
+                ul.evaluate {
+                    li {
+                        height: 1.2rem;
+                        &:nth-child(1) {
+                            height: 1.2rem;
+                            line-height: 1.2rem;
+                            i {
+                                font-size: 0.6rem;
+                            }
+                            span {
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .feedbackSituation {
+        margin-top: 11rem;
+        padding: 0 0.5rem;
+        background: #fff;
+        .title {
+            height: 2rem;
+            line-height: 2rem;
+            border-bottom: 0.01rem solid #eee;
+            span {
+                height: 1.2rem;
+                display: inline-block;
+                margin-top: 0.4rem;
+                line-height: 1.2rem;
+                width: 4rem;
+                border-left: 0.2rem solid #0075C2;
+                padding-left: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        .step {
+            padding: 0.8rem 0 0 0.8rem;
+            ul {
+                li {
+                    position: relative;
+                    border-left: 0.1rem solid #868D98;
+                    padding-left: 1rem;
+                    i {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-radius: 100%;
+                        position: absolute;
+                        left: -0.3rem;
+                        top: -0.2rem;
+                        background: #868D98;
+                    }
+                    div.titleTime {
+                        height: 1.6rem;
+                        width: 100%;
+                        p {
+                            float: left;
+                            color: #000;
+                        }
+                        span {
+                            float: right;
+                            font-size: 0.6rem;
+                        }
+                    }
+                    span {
+                        font-size: 0.6rem;
+                        padding-bottom: 3rem;
+                        display: block;
+                    }
+
+                }
+                li.active{
+                    border-left: 0.1rem solid #0091EA;
+                    i{
+                        background: #0091EA;
+                    }
+                }
+            }
+        }
+    }
+}
