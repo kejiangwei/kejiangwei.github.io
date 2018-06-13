@@ -4,10 +4,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>任务</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<!--<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_697310_ab3dbnx1elsdcxr.css" />-->
 		<!--标准mui.css-->
 		<link rel="stylesheet" href="css/mui.min.css">
 		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
@@ -245,7 +244,7 @@
 						<a href="javascript:;" class="active">任务</a>
 					</li>
 					<li><img src="img/annet_report_form_black_gaitubao_com_60x60.png" />
-						<a href="ReportForm.html">报表</a>
+						<a href="reportForm.html">报表</a>
 					</li>
 					<li><img src="img/annet_my_black_gaitubao_com_60x60.png" />
 						<a href="personal.html">我的</a>
@@ -262,69 +261,67 @@
 		    </h2>
 				</div>
 				<div class="form">
-
 					<ul>
 						<li>
 							<label for="name">执行案号</label>
-							<input type="text" name="name" id="name" value="" placeholder="请输入执行案号(必填)" />
+							<input type="tel" name="ajbh" id="ajbh" value="" placeholder="请输入执行案号(必填)" />
 						</li>
 						<li class="selectValue setUpCaseTime" data-options='{"type":"month"}'>
 							<label for="name">立案时间</label>
-							<span>2018-06-09</span>
+							<span id="lasj" data-name="">请选择(必填)</span>
 							<i class="open_close"></i>
 						</li>
 						<li>
-							<label for="tel">申请执行人</label>
-							<input type="tel" name="tel" id="tel" value="" placeholder="请输入申请执行人(必填)" />
+							<label for="rwsqr">申请执行人</label>
+							<input type="text" name="rwsqr" id="rwsqr" value="" placeholder="请输入申请执行人(必填)" />
 						</li>
 						<li>
-							<label for="tel">被执行人</label>
-							<input type="tel" name="tel" id="tel" value="" placeholder="请输入被执行人(必填)" />
+							<label for="bzxr">被执行人</label>
+							<input type="text" name="bzxr" id="bzxr" value="" placeholder="请输入被执行人(必填)" />
 						</li>
-						<li class="selectValue selectSex"> 
+						<li class="selectValue selectSex">
 							<label for="name">性别</label>
-							<span>男</span>
+							<span id="xbId" data-name="">请选择(必填)</span>
 							<i class="open_close"></i>
 						</li>
 						<li>
-							<label for="tel">住址</label>
-							<input type="tel" name="tel" id="tel" value="" placeholder="请输入住址(非必填)" />
+							<label for="dz">住址</label>
+							<input type="text" name="dz" id="dz" data-name="" value="" placeholder="请输入住址(非必填)" />
 						</li>
 						<li>
-							<label for="tel">身份证号</label>
-							<input type="tel" name="tel" id="tel" value="" placeholder="选填" />
+							<label for="sfzh">身份证号</label>
+							<input type="tel" name="sfzh" id="sfzh" value="" placeholder="选填" />
 						</li>
 						<li>
-							<label for="tel">联系电话</label>
-							<input type="tel" name="tel" id="tel" value="" placeholder="选填" />
+							<label for="lxdh">联系电话</label>
+							<input type="tel" name="lxdh" id="lxdh" value="" placeholder="选填" />
 						</li>
 						<li class="selectValue CaseReason">
 							<label for="name">案由</label>
-							<input type="text" readonly="readonly" name="" id="" value="" placeholder="请选择(必填)" />
+							<span id="ayId" data-name="">请选择(必填)</span>
 							<i class="open_close"></i>
 						</li>
 
 						<li>
-							<label for="tel">执行标的金额(万元)</label>
-							<input type="tel" name="tel" id="tel" value="" placeholder="请输入金额(必填)" />
+							<label for="je">执行标的金额(万元)</label>
+							<input type="tel" name="je" id="je" value="" placeholder="请输入金额(必填)" />
 						</li>
 
 						<li class="selectValue WorkingGroup">
 							<label for="name">工作组负责人</label>
-							<input type="text" readonly="readonly" name="" id="" value="" placeholder="请选择(必填)" />
+							<span id="zffzrid" data-name="">请选择(必填)</span>
 							<i class="open_close"></i>
 						</li>
 
 						<li class="selectValue TownshipSupervisor">
 							<label for="name">乡镇督办人</label>
-							<!--<span>请选择(必填)</span>-->
-							<input type="text" readonly="readonly" name="" id="" value="" placeholder="请选择(必填)" />
+							<span id="xzfzrid" data-name="">请选择(必填)</span>
 							<i class="open_close"></i>
 						</li>
 					</ul>
 
 					<div class="sumbit">
-						<input type="button" name="registerSumbit" id="registerSumbit" value="提交" />
+						<input type="button" name="registerSumbit" id="registerSumbit" onclick="task.registerSumbit()" value="提交" />
 					</div>
 				</div>
 			</div>
@@ -447,94 +444,12 @@
 	<script src="js/mui.min.js"></script>
 	<script src="js/mui.picker.min.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/pickerData.js"></script>
 	<script src="js/task.js"></script>
 	<script>
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
 		});
-
-		//		立案时间
-		$('.setUpCaseTime').on("click", function() {
-			var dtpicker = new mui.DtPicker({
-				type: "date", //设置日历初始视图模式 
-				beginDate: new Date(2015, 04, 25), //设置开始日期 
-				endDate: new Date(2016, 04, 25), //设置结束日期 
-			})
-			dtpicker.show(function(e) {
-				console.log(e);
-				$('.setUpCaseTime>span').text(e.text)
-			})
-		})
-		
-//		性别选择
-		$(".selectSex").on("click", function() {
-			let data = [{
-				value: "1",
-				text: "男"
-			}, {
-				value: "2",
-				text: "女"
-			}]
-			pickerSelect(data)
-			
-		})
-		
-		
-		//		案由   工作组负责人   乡镇组督办人
-		$(".CaseReason,.WorkingGroup,.TownshipSupervisor").on("click", function() {
-			let data = [{
-				value: "first",
-				text: "第一项"
-			}, {
-				value: "second",
-				text: "第一项"
-			}, {
-				value: "third",
-				text: "第三项"
-			}, {
-				value: "fourth",
-				text: "第四项"
-			}, {
-				value: "fifth",
-				text: "第五项"
-			}]
-			
-			pickerSelect(data)
-		})
-		
-
-		//		全部机关   所有案件
-		$(".allCases,.allOrgans").on("click", function() {
-			let data = [{
-				value: "first",
-				text: "第一项"
-			}, {
-				value: "second",
-				text: "第一项"
-			}, {
-				value: "third",
-				text: "第三项"
-			}, {
-				value: "fourth",
-				text: "第四项"
-			}, {
-				value: "fifth",
-				text: "第五项"
-			}]
-			
-			pickerSelect(data)
-		})
-		
-		function pickerSelect(valueData){
-			var picker = new mui.PopPicker();
-			picker.setData(valueData)
-			picker.pickers[0].setSelectedValue('fourth', 2000);
-			picker.show(function(SelectedItem) {
-				console.log(SelectedItem);
-				return SelectedItem;
-			})
-		}
-		
 	</script>
 
 </html>

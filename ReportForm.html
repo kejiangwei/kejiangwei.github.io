@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>报表</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<!--标准mui.css-->
@@ -155,13 +155,12 @@
 				type: "month", //设置日历初始视图模式 
 				beginDate: new Date(2015, 04), //设置开始日期 
 				endDate: new Date(2016, 04), //设置结束日期 
-				
+
 			})
 			dtpicker.show(function(e) {
 				console.log(e);
 			})
 		})
-
 	</script>
 
 </html>

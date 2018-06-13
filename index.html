@@ -4,13 +4,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>登录</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_697310_ab3dbnx1elsdcxr.css" />
 		<!--标准mui.css-->
 		<link rel="stylesheet" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 		<link rel="stylesheet/less" type="text/css" href="css/login.less" />
 		<script src="js/fontAuto.js"></script>
@@ -22,11 +22,11 @@
 				<ul>
 					<li>
 						<label for="loginName"><i class="icon iconfont icon-yonghuming"></i></label>
-						<input type="text" name="loginName" id="loginName" value="15798008317" placeholder="用户名或手机号" />
+						<input type="text" name="loginName" id="loginName" value="" placeholder="用户名或手机号" />
 					</li>
 					<li>
 						<label for="loginPwd"><i class="icon iconfont icon-Icon_password"></i></label>
-						<input type="password" name="loginPwd" id="loginPwd" value="1234567" placeholder="密码" />
+						<input type="password" name="loginPwd" id="loginPwd" value="" placeholder="密码" />
 					</li>
 					<li>
 						<input type="button" name="loginSumbit" id="loginSumbit" onclick="login.login()" value="登录" />
@@ -53,7 +53,7 @@
 						</li>
 						<li class="selectValue" id="selectMechanism">
 							<label for="registerSwjgid">所属机构</label>
-							<span class="registerSwjgid" id="registerSwjgid">王家堡机构</span>
+							<span class="registerSwjgid" id="registerSwjgid" data-name="">请选择(必填)</span>
 							<i class="open_close"></i>
 						</li>
 						<li>
@@ -73,7 +73,7 @@
 					<div class="sumbit">
 						<input type="button" name="registerSumbit" id="registerSumbit" onclick="login.register()" value="提交" />
 					</div>
-					
+
 				</div>
 			</div>
 
@@ -95,12 +95,12 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<!--动态加载效果-->
 		<div class="loader">
 			<img src="img/ball-triangle.svg" width="50" alt="">
 		</div>
-		
+
 	</body>
 	<script src="js/jquery-3.1.1.js"></script>
 	<script src="js/less.min.js"></script>
@@ -113,9 +113,6 @@
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
 		});
-		
-		
-		
 	</script>
 
 </html>
