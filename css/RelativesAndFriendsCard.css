@@ -76,9 +76,11 @@
 
 .RelativesAndFriendsCardBox ul li.boxSubmit {
 	    height: auto;
-    width: 100%;
-    margin-left: -2px;
+    /*width: 100%;*/
+    /*margin-left: -2px;*/
         overflow: hidden;
+        width: 76%;
+	margin-left: 12%;
 }
 
 .RelativesAndFriendsCardBox ul li.boxSubmit input[type=button] {
@@ -102,6 +104,8 @@
 	width: 98%;
 	margin-top: 0.1rem;
 	box-shadow: 0px 0px 3px #facc28;
+	background: linear-gradient(#fce027, #fed122) url(../img/ft-font.png) no-repeat center center;
+	margin-top: 0.8;
 }
 
 .RelativesAndFriendsCardBox ul li.boxRule {
