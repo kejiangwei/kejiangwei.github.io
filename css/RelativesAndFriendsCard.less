@@ -3,9 +3,27 @@
 .RelativesAndFriendsCard {
     .outerDiv;
     overflow: hidden;
+    background: url(../img/ft_img_bg.png) no-repeat center center;
+    background-size: cover;
     img.bg-img {
         width: 100%;
         height: 100%;
+    }
+    .box-logo {
+        height: 2.6rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        img {
+            width: 40%;
+            margin-left: 30%;
+        }
+    }
+    img.box-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .RelativesAndFriendsCardBox {
         z-index: 2;
@@ -51,13 +69,13 @@
                 height: 2.8rem;
                 overflow: hidden;
                 input[type=button] {
-                    background: -webkit-linear-gradient(#f7d704, #fce027);
+                    background: -webkit-linear-gradient(#fce027, #fed122);
                     /* Safari 5.1 - 6.0 */
-                    background: -o-linear-gradient(#f7d704, #fce027);
+                    background: -o-linear-gradient(#fce027, #fed122);
                     /* Opera 11.1 - 12.0 */
-                    background: -moz-linear-gradient(#f7d704, #fce027);
+                    background: -moz-linear-gradient(#fce027, #fed122);
                     /* Firefox 3.6 - 15 */
-                    background: linear-gradient(#f7d704, #fce027);
+                    background: linear-gradient(#fce027, #fed122);
                     /* 标准的语法 */
                     color: #555;
                     border: 0;
@@ -70,7 +88,7 @@
                     height: 2.6rem;
                     width: 98%;
                     margin-top: 0.1rem;
-                    box-shadow: 0px 0px 3px #7b7979;
+                    box-shadow: 0px 0px 3px #facc28;
                 }
             }
             li.boxRule {
