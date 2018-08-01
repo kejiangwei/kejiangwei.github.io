@@ -1,0 +1,118 @@
+/**
+ 作者：kejiangwei
+ 时间：2018/7/31
+ 描述：RelativesAndFriendsCard.js
+ */
+'use strict';
+var RelativesAndFriendsCard = (function() {
+	var hostUrl = 'https://leyouapp.fangte.com/v4/api/'; //请求地址
+	var sign = '' //签名
+	//	获取页面数据  api/YearCard/QueryRelativeWelfareVipCardShareInfoAsync
+	function getPageData() {
+		let data = {
+			"sign": "aUjdCcfCi8kIY/qXLD0kgjpY0rJKTZih7wTkpQhnJoM="
+		}
+		$.ajax({
+			"async": true,
+			"url": hostUrl + "YearCard/H5QueryRelativeWelfareVipCardShareInfoAsync",
+			"method": "POST",
+			"headers": {
+				"content-type": "application/json",
+				"cache-control": "no-cache"
+			},
+			"data": JSON.stringify(data)
+		}).done(function(response) {
+			console.log(response)
+			$("#name").text(response.data.shareUserName)
+		}).fail(function(error) {
+			console.log(error)
+			mui.toast('网络错误');
+		});
+	}
+
+	//	查看使用 存在三种判断
+	//1.ios 打开app store,如果已经安装则显示打开按钮。未安装则显示下载按钮。
+	//2.安卓微信里  打开应用宝，如果已经安装则显示打开按钮。未安装则显示下载按钮。
+	//3.安卓微信外  已安装则直接打开APP，未安装则直接下载。
+	function seeUseMethod() {
+		console.log("查看使用")
+		//		判断是安卓机还是苹果机
+		let useEquipment = ''; //使用的设备
+		var ua = navigator.userAgent.toLowerCase();
+		if(/iphone|ipad|ipod/.test(ua)) {
+			console.log("iphone");
+			useEquipment = 'iphone';
+		} else if(/android/.test(ua)) {
+			console.log("android");
+			useEquipment = 'android';
+		}
+		let is_weixin_open = is_weixn();
+		console.log("是否在微信打开" + is_weixin_open)
+		if(useEquipment === "iphone") {
+			var loadDateTime = new Date();
+			window.setTimeout(function() {
+					var timeOutDateTime = new Date();
+					if(timeOutDateTime - loadDateTime < 5000) {
+						window.location = "要跳转的页面URL";
+					} else {
+						window.close();
+					}
+				},
+				25);
+			window.location = " apps custom url schemes ";
+		} else if(useEquipment === "android" && is_weixin_open == "false") {
+			var state = null;
+			try {
+				state = window.open("leyou://hytch", '_blank');
+			} catch(e) {}
+			if(state) {
+				window.close();
+			} else {
+				window.location = "要跳转的页面URL";
+			}
+		} else if(useEquipment === "android" && is_weixin_open == "true") {
+
+		}
+	}
+
+	//判断是否在微信里面打开
+	function is_weixn() {
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == "micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	//	获取地址栏参数
+	function getUrlParms(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r != null)
+			return unescape(r[2]);
+		return null;
+	}
+
+	//	初始化页面
+	function OnLoadPage() {
+		console.log("××××××××××××进入亲友卡界面×××××××××××××××××")
+		sign = getUrlParms("sign"); //获取地址栏参数
+		//		getUserInfo()
+		//			获取页面信息
+		getPageData()
+
+		$(".closePage").on("click", function() {
+			console.log("关闭页面")
+		})
+	}
+
+	return {
+		OnLoadPage: OnLoadPage,
+		seeUseMethod: seeUseMethod,
+	}
+})();
+
+window.onload = function() {
+	RelativesAndFriendsCard.OnLoadPage()
+}

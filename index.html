@@ -1,118 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" class="ui-page-login">
+<html>
 
 	<head>
-		<meta charset="UTF-8">
-		<title>登录</title>
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_697310_ab3dbnx1elsdcxr.css" />
-		<!--标准mui.css-->
-		<link rel="stylesheet" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/common.css" />
-		<link rel="stylesheet/less" type="text/css" href="css/login.less" />
+		<meta name='apple-itunes-app' content='app-id=477927812'>
+		<title>RelativesAndFriendsCard</title>
+
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet/less" type="text/css" href="css/RelativesAndFriendsCard.less">
 		<script src="js/fontAuto.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
 	</head>
 
 	<body>
-		<div class="login wrap" id="login">
-			<div class="loginBox">
-				<ul>
-					<li>
-						<label for="loginName"><i class="icon iconfont icon-yonghuming"></i></label>
-						<input type="text" name="loginName" id="loginName" value="" placeholder="用户名或手机号" />
-					</li>
-					<li>
-						<label for="loginPwd"><i class="icon iconfont icon-Icon_password"></i></label>
-						<input type="password" name="loginPwd" id="loginPwd" value="" placeholder="密码" />
-					</li>
-					<li>
-						<input type="button" name="loginSumbit" id="loginSumbit" onclick="login.login()" value="登录" />
-					</li>
-					<li>
-						<span class="registerAccount">注册帐号</span>
-					</li>
-				</ul>
-				<span class="codeLogin">案件标识码登录</span>
-			</div>
-
-			<div class="registerBox undis">
-				<div class="header">
-					<h2>
-		      <a class="back" href="#" id="register_back_login"></a>
-		      用户注册
-		    </h2>
-				</div>
-				<div class="form">
+		<div class="RelativesAndFriendsCard">
+			<img class="bg-img" src="img/ft-bg.png" alt="背景图"/>
+			<div class="RelativesAndFriendsCardBox">
 					<ul>
-						<li>
-							<label for="registerName">姓名</label>
-							<input type="text" name="registerName" id="registerName" value="" placeholder="请输入姓名(必填)" />
-						</li>
-						<li class="selectValue" id="selectMechanism">
-							<label for="registerSwjgid">所属机构</label>
-							<span class="registerSwjgid" id="registerSwjgid" data-name="">请选择(必填)</span>
-							<i class="open_close"></i>
-						</li>
-						<li>
-							<label for="registerTel">手机号</label>
-							<input type="tel" name="registerTel" id="registerTel" value="" placeholder="请输入手机号码(必填)" />
-						</li>
-						<li>
-							<label for="registerPwd">密码</label>
-							<input type="password" name="registerPwd" id="registerPwd" value="" placeholder="请输入密码(必填)" />
-						</li>
-						<li>
-							<label for="sureRegisterPwd">确认密码</label>
-							<input type="password" name="sureRegisterPwd" id="sureRegisterPwd" value="" placeholder="请再次输入密码(必填)" />
-						</li>
+						<li class="boxContent"><span class="name" id="name"></span>送您一张方特亲友卡，您可凭此卡在一年内，免费游玩方特主题乐园，现在登录方特旅游APP即可使用。</li>
+						<li class="boxCard"><img src="img/ft-card.png" alt="亲友卡"/></li>
+						<li class="boxSubmit"><input type="button" class="button" value="查看使用" onclick="RelativesAndFriendsCard.seeUseMethod()" /></li>
 					</ul>
-					<div class="fill"></div>
-					<div class="sumbit">
-						<input type="button" name="registerSumbit" id="registerSumbit" onclick="login.register()" value="提交" />
-					</div>
-
-				</div>
-			</div>
-
-			<div class="codeBox undis">
-				<div class="header">
-					<h2>
-		      <a class="back" href="#" id="code_back_login"></a>
-		      请输入案件标识码
-		    </h2>
-				</div>
-				<ul>
-
-					<li>
-						<input type="text" name="codeValue" id="codeValue" value="" placeholder="标识码" />
-					</li>
-					<li>
-						<input type="button" name="codeSumbit" id="codeSumbit" onclick="login.code()" value="确认" />
-					</li>
-				</ul>
 			</div>
 		</div>
-
-		<!--动态加载效果-->
-		<div class="loader">
-			<img src="img/ball-triangle.svg" width="50" alt="">
-		</div>
-
+		
+		
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/less.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/RelativesAndFriendsCard.js"></script>
 	</body>
-	<script src="js/jquery-3.1.1.js"></script>
-	<script src="js/less.min.js"></script>
-	<script src="js/mui.min.js"></script>
-	<script src="js/mui.picker.min.js"></script>
-	<script src="js/md5.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/login.js"></script>
-	<script>
-		mui.init({
-			swipeBack: true //启用右滑关闭功能
-		});
-	</script>
 
 </html>
