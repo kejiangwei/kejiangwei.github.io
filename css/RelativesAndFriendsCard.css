@@ -45,9 +45,9 @@
 
 .RelativesAndFriendsCardBox ul li.boxContent {
 	padding-top: 3.8rem;
-	width: 80%;
+	width: 76%;
 	height: 7.5rem;
-	margin-left: 10%;
+	margin-left: 12%;
 	text-align: left;
 	color: #333333;
 	text-indent: 1.8rem;
@@ -74,8 +74,8 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxSubmit {
-	width: 80%;
-	margin-left: 10%;
+	width: 76%;
+	margin-left: 12%;
 	height: 2.8rem;
 	overflow: hidden;
 }
