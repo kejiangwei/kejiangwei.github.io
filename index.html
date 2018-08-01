@@ -62,18 +62,16 @@
 				//ios
 				if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
 					if(browser.match(/micromessenger/i)) {
-//						alert("苹果微信")
 						//微信内置浏览器
-						window.location.href = "leyou://";
+						window.location.href = "leyou://"; //ios app协议，由ios同事提供
 						window.setTimeout(function() {
-							window.location.href = "https://itunes.apple.com/us/app/cheng-shi-gao-er-fu/id1008696844?mt=8&uo=4";
+							window.location.href = "https://itunes.apple.com/us/app/方特旅游/id1089447593?l=zh&ls=1&mt=8";
 						}, 1000)
 						return
 					} else {
-//						alert("苹果浏览器")
 						window.location.href = "leyou://"; //ios app协议，由ios同事提供
 						window.setTimeout(function() {
-							window.location.href = "https://itunes.apple.com/us/app/cheng-shi-gao-er-fu/id1008696844?mt=8&uo=4";
+							window.location.href = "https://itunes.apple.com/us/app/方特旅游/id1089447593?l=zh&ls=1&mt=8";
 						}, 2000)
 						return
 					}
@@ -81,16 +79,13 @@
 
 				if(navigator.userAgent.match(/android/i)) {
 					if(browser.match(/micromessenger/i)) {
-//						alert("安卓微信")
 						//Android
 						window.location.href = "leyou://hytch"; //安卓协议，由安卓同事提供
 						window.setTimeout(function() {
-//							https://itunes.apple.com/us/app/998dian-wan-cheng/id1135278767?mt=8
 							window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=gr eenjoy.golf.app&g_f=991653"
 						}, 2000)
 						return
 					} else {
-//						alert("安卓浏览器")
 						//Android
 						window.location.href = "leyou://hytch"; //安卓协议，由安卓同事提供
 						window.setTimeout(function() {
