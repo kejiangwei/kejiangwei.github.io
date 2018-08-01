@@ -65,7 +65,7 @@
 
 .RelativesAndFriendsCardBox ul li.boxCard {
 	width: 80%;
-	height: 11.8rem;
+	height: 10.4rem;
 	margin: 0rem 10%;
 	overflow: hidden;
 }
@@ -75,10 +75,10 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxSubmit {
-	width: 76%;
-	margin-left: 12%;
-	height: 2.8rem;
-	overflow: hidden;
+	    height: auto;
+    width: 100%;
+    margin-left: -2px;
+        overflow: hidden;
 }
 
 .RelativesAndFriendsCardBox ul li.boxSubmit input[type=button] {
@@ -95,8 +95,8 @@
 	border-radius: 1.2rem;
 	text-indent: 0.05rem;
 	letter-spacing: 0.05rem;
-	font-size: 0.98rem;
-	font-weight: 500;
+	font-size: 0.9rem;
+	font-weight: 600;
 	font-family: "微软雅黑";
 	height: 2.6rem;
 	width: 98%;
@@ -105,7 +105,7 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxRule {
-	padding-top: 1.8rem;
+	padding-top: 0.4rem;
 	color: #999999;
 	width: 80%;
 	margin-left: 10%;
