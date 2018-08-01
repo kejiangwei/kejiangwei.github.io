@@ -29,7 +29,7 @@
                 text-align: left;
                 color: #333333;
                 text-indent: 28px;
-                font-weight: 600;
+                font-weight: 700;
                 font-size: 0.76rem;
                 font-family: "微软雅黑";
                 .name {
@@ -48,18 +48,28 @@
             li.boxSubmit {
                 width: 80%;
                 margin-left: 10%;
-                height: 2rem;
+                height: 2.4rem;
                 overflow: hidden;
                 input[type=button] {
-                    background: #fce027;
+                    background: -webkit-linear-gradient(#f7d704, #fce027);
+                    /* Safari 5.1 - 6.0 */
+                    background: -o-linear-gradient(#f7d704, #fce027);
+                    /* Opera 11.1 - 12.0 */
+                    background: -moz-linear-gradient(#f7d704, #fce027);
+                    /* Firefox 3.6 - 15 */
+                    background: linear-gradient(#f7d704, #fce027);
+                    /* 标准的语法 */
                     color: #555;
                     border: 0;
-                    border-radius: 1rem;
+                    border-radius: 1.2rem;
                     text-indent: 0.2rem;
                     letter-spacing: 0.2rem;
-                    font-size: 0.7rem;
-                    font-weight: 600;
+                    font-size: 0.8rem;
+                    font-weight: 700;
                     font-family: "微软雅黑";
+                    height: 2.3rem;
+                    width: 99%;
+                    box-shadow: 0px 1px 1px #fce027;
                 }
             }
             li.boxRule {
@@ -72,14 +82,14 @@
                     position: relative;
                     margin-bottom: 0.5rem;
                     i {
-                        height: 2px;
+                        height: 1px;
                         width: 35%;
                         background: #E0E0E0;
                         display: inline-block;
                         float: left;
                         line-height: 2rem;
                         position: absolute;
-                        top: 0.4rem;
+                        top: 0.5rem;
                     }
                     i.left {
                         left: 0;
