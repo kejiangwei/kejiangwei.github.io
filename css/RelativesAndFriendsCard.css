@@ -44,7 +44,7 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxContent {
-	padding-top: 3.4rem;
+	padding-top: 3.8rem;
 	width: 80%;
 	height: 7.5rem;
 	margin-left: 10%;
@@ -64,7 +64,7 @@
 
 .RelativesAndFriendsCardBox ul li.boxCard {
 	width: 80%;
-	height: 11.5rem;
+	height: 11.8rem;
 	margin: 0rem 10%;
 	overflow: hidden;
 }
@@ -95,7 +95,7 @@
 	text-indent: 0.05rem;
 	letter-spacing: 0.05rem;
 	font-size: 0.9rem;
-	font-weight: 650;
+	font-weight: 700;
 	font-family: "微软雅黑";
 	height: 2.6rem;
 	width: 98%;
@@ -104,7 +104,7 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxRule {
-	padding-top: 1.5rem;
+	padding-top: 1.8rem;
 	color: #999999;
 	width: 80%;
 	margin-left: 10%;
