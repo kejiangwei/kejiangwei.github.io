@@ -1,0 +1,152 @@
+.RelativesAndFriendsCard {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+
+.RelativesAndFriendsCard .box-logo {
+	z-index: 3;
+	height: 2.6rem;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.RelativesAndFriendsCard .box-logo img {
+	width: 50%;
+	margin-left: 25%;
+}
+
+.RelativesAndFriendsCardBox {
+	z-index: 2;
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+	background: url(../img/ft_img_bg.png) no-repeat center center;
+	background-size: cover;
+	min-height: 32rem;
+}
+
+.RelativesAndFriendsCardBox ul {
+	height: 100%;
+	width: 100%;
+	overflow-y: hidden;
+}
+
+.RelativesAndFriendsCardBox ul li {
+	list-style: none;
+	display: block;
+	text-align: center;
+}
+
+.RelativesAndFriendsCardBox ul li.boxContent {
+	padding-top: 3rem;
+	width: 80%;
+	height: 7.5rem;
+	margin-left: 10%;
+	text-align: left;
+	color: #333333;
+	text-indent: 28px;
+	font-weight: 700;
+	font-size: 0.76rem;
+	font-family: "微软雅黑";
+}
+
+.RelativesAndFriendsCardBox ul li.boxContent .name {
+	font-size: 0.86rem;
+}
+
+.RelativesAndFriendsCardBox ul li.boxCard {
+	width: 80%;
+	height: 9rem;
+	margin: 0rem 10%;
+	overflow: hidden;
+}
+
+.RelativesAndFriendsCardBox ul li.boxCard img {
+	width: 100%;
+}
+
+.RelativesAndFriendsCardBox ul li.boxSubmit {
+	width: 80%;
+	margin-left: 10%;
+	height: 2.8rem;
+	overflow: hidden;
+}
+
+.RelativesAndFriendsCardBox ul li.boxSubmit input[type=button] {
+	background: -webkit-linear-gradient(#fce027, #fed122);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#fce027, #fed122);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#fce027, #fed122);
+	/* Firefox 3.6 - 15 */
+	background: linear-gradient(#fce027, #fed122);
+	/* 标准的语法 */
+	color: #555;
+	border: 0;
+	border-radius: 1.2rem;
+	text-indent: 0.05rem;
+	letter-spacing: 0.05rem;
+	font-size: 0.9rem;
+	font-weight: 650;
+	font-family: "微软雅黑";
+	height: 2.6rem;
+	width: 98%;
+	margin-top: 0.1rem;
+	box-shadow: 0px 0px 3px #facc28;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule {
+	padding-top: 1rem;
+	color: #999999;
+	width: 80%;
+	margin-left: 10%;
+	height: 9rem;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule div.title {
+	position: relative;
+	margin-bottom: 0.5rem;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule div.title i {
+	height: 1px;
+	width: 35%;
+	background: #E0E0E0;
+	display: inline-block;
+	float: left;
+	line-height: 2rem;
+	position: absolute;
+	top: 0.5rem;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule div.title i.left {
+	left: 0;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule div.title i.right {
+	right: 0;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule ul li span {
+	display: block;
+	float: left;
+	width: 10%;
+	text-align: left;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule ul li p {
+	display: inline-block;
+	float: left;
+	width: 90%;
+	text-align: left;
+}
+.fixBottomYellow{
+	background: #facc28;
+	width: 100%;
+	height: 0.6rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
