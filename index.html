@@ -38,6 +38,10 @@
 		<script src="js/mui.min.js"></script>
 		<script src="js/RelativesAndFriendsCard.js"></script>
 		<script type="text/javascript">
+			//	查看使用 存在三种判断
+			//1.ios 打开app store,如果已经安装则显示打开按钮。未安装则显示下载按钮。
+			//2.安卓微信里  打开应用宝，如果已经安装则显示打开按钮。未安装则显示下载按钮。
+			//3.安卓微信外  已安装则直接打开APP，未安装则直接下载。
 			document.getElementById('openApp').onclick = function(e) {
 				//ios
 				if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
@@ -47,14 +51,14 @@
 					if(browser.match(/micromessenger/i)) {
 						alert("苹果微信")
 						//微信内置浏览器
-						window.location.href = "hengtaixin://";
+						window.location.href = "fangtetravel://";
 						window.setTimeout(function() {
 							window.location.href = "https://itunes.apple.com/us/app/cheng-shi-gao-er-fu/id1008696844?mt=8&uo=4";
 						}, 1000)
 						return
 					} else {
 						alert("苹果浏览器")
-						window.location.href = "hengtaixin://"; //ios app协议，由ios同事提供
+						window.location.href = "fangtetravel://"; //ios app协议，由ios同事提供
 						window.setTimeout(function() {
 							window.location.href = "https://itunes.apple.com/us/app/cheng-shi-gao-er-fu/id1008696844?mt=8&uo=4";
 						}, 2000)

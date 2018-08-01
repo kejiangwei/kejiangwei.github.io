@@ -10,8 +10,9 @@ var RelativesAndFriendsCard = (function() {
 	//	获取页面数据  api/YearCard/QueryRelativeWelfareVipCardShareInfoAsync
 	function getPageData() {
 		let data = {
-			"sign": "aUjdCcfCi8kIY/qXLD0kgjpY0rJKTZih7wTkpQhnJoM="
+			"sign": sign
 		}
+		console.log(data)
 		$.ajax({
 			"async": true,
 			"url": hostUrl + "YearCard/H5QueryRelativeWelfareVipCardShareInfoAsync",
@@ -30,10 +31,51 @@ var RelativesAndFriendsCard = (function() {
 		});
 	}
 
-	//	查看使用 存在三种判断
-	//1.ios 打开app store,如果已经安装则显示打开按钮。未安装则显示下载按钮。
-	//2.安卓微信里  打开应用宝，如果已经安装则显示打开按钮。未安装则显示下载按钮。
-	//3.安卓微信外  已安装则直接打开APP，未安装则直接下载。
+
+
+	//判断是否在微信里面打开
+	function is_weixn() {
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == "micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	//	获取地址栏参数
+	function getUrlParms(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r != null)
+			return unescape(r[2]);
+		return null;
+	}
+
+	//	初始化页面
+	function OnLoadPage() {
+		console.log("××××××××××××进入亲友卡界面×××××××××××××××××")
+		sign = getUrlParms("sign"); //获取地址栏参数
+		getPageData()
+
+		$(".closePage").on("click", function() {
+			console.log("关闭页面")
+		})
+	}
+
+	return {
+		OnLoadPage: OnLoadPage
+	}
+})();
+
+window.onload = function() {
+	RelativesAndFriendsCard.OnLoadPage()
+}
+
+
+
+
+
 //	function seeUseMethod() {
 //		console.log("查看使用")
 //		//		判断是安卓机还是苹果机
@@ -92,50 +134,3 @@ var RelativesAndFriendsCard = (function() {
 //
 //		}
 //	}
-
-	//判断是否在微信里面打开
-	function is_weixn() {
-		var ua = navigator.userAgent.toLowerCase();
-		if(ua.match(/MicroMessenger/i) == "micromessenger") {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	//	获取地址栏参数
-	function getUrlParms(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-		var r = window.location.search.substr(1).match(reg);
-		if(r != null)
-			return unescape(r[2]);
-		return null;
-	}
-
-	//	初始化页面
-	function OnLoadPage() {
-		console.log("××××××××××××进入亲友卡界面×××××××××××××××××")
-		sign = getUrlParms("sign"); //获取地址栏参数
-		//		getUserInfo()
-		//			获取页面信息
-		getPageData()
-
-		$(".closePage").on("click", function() {
-			console.log("关闭页面")
-		})
-		
-
-		
-		
-		
-	}
-
-	return {
-		OnLoadPage: OnLoadPage,
-		seeUseMethod: seeUseMethod,
-	}
-})();
-
-window.onload = function() {
-	RelativesAndFriendsCard.OnLoadPage()
-}
