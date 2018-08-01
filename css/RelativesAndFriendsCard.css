@@ -13,8 +13,8 @@
 }
 
 .RelativesAndFriendsCard .box-logo img {
-	width: 50%;
-	margin-left: 25%;
+	width: 56%;
+	margin-left: 22%;
 }
 
 .RelativesAndFriendsCardBox {
@@ -22,7 +22,7 @@
 	overflow: auto;
 	height: 100%;
 	width: 100%;
-	background: url(../img/ft_img_bg.png) no-repeat center center;
+	background: url(../img/ft_img_bg1.png) no-repeat center center;
 	background-size: cover;
 	min-height: 36rem;
 	-webkit-background-size: cover;
@@ -52,10 +52,11 @@
 	color: #333333;
 	text-indent: 1.8rem;
 	font-weight: 700;
-	font-size: 0.76rem;
+	font-size: 0.79rem;
 	font-family: "微软雅黑";
 	text-align:  center;
 	letter-spacing: 2px;
+	/* white-space: unset; */
 }
 
 .RelativesAndFriendsCardBox ul li.boxContent .name {
@@ -95,7 +96,7 @@
 	text-indent: 0.05rem;
 	letter-spacing: 0.05rem;
 	font-size: 0.9rem;
-	font-weight: 700;
+	font-weight: 600;
 	font-family: "微软雅黑";
 	height: 2.6rem;
 	width: 98%;
