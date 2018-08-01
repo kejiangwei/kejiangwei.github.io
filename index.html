@@ -43,11 +43,9 @@
 			//2.安卓微信里  打开应用宝，如果已经安装则显示打开按钮。未安装则显示下载按钮。
 			//3.安卓微信外  已安装则直接打开APP，未安装则直接下载。
 			document.getElementById('openApp').onclick = function(e) {
+				var browser = navigator.userAgent.toLowerCase();
 				//ios
 				if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
-
-					var browser = navigator.userAgent.toLowerCase();
-
 					if(browser.match(/micromessenger/i)) {
 						alert("苹果微信")
 						//微信内置浏览器
