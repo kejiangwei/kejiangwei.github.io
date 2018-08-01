@@ -34,46 +34,64 @@ var RelativesAndFriendsCard = (function() {
 	//1.ios 打开app store,如果已经安装则显示打开按钮。未安装则显示下载按钮。
 	//2.安卓微信里  打开应用宝，如果已经安装则显示打开按钮。未安装则显示下载按钮。
 	//3.安卓微信外  已安装则直接打开APP，未安装则直接下载。
-	function seeUseMethod() {
-		console.log("查看使用")
-		//		判断是安卓机还是苹果机
-		let useEquipment = ''; //使用的设备
-		var ua = navigator.userAgent.toLowerCase();
-		if(/iphone|ipad|ipod/.test(ua)) {
-			console.log("iphone");
-			useEquipment = 'iphone';
-		} else if(/android/.test(ua)) {
-			console.log("android");
-			useEquipment = 'android';
-		}
-		let is_weixin_open = is_weixn();
-		console.log("是否在微信打开" + is_weixin_open)
-		if(useEquipment === "iphone") {
-			var loadDateTime = new Date();
-			window.setTimeout(function() {
-					var timeOutDateTime = new Date();
-					if(timeOutDateTime - loadDateTime < 5000) {
-						window.location = "要跳转的页面URL";
-					} else {
-						window.close();
-					}
-				},
-				25);
-			window.location = " apps custom url schemes ";
-		} else if(useEquipment === "android" && is_weixin_open == "false") {
-			var state = null;
-			try {
-				state = window.open("leyou://hytch", '_blank');
-			} catch(e) {}
-			if(state) {
-				window.close();
-			} else {
-				window.location = "要跳转的页面URL";
-			}
-		} else if(useEquipment === "android" && is_weixin_open == "true") {
-
-		}
-	}
+//	function seeUseMethod() {
+//		console.log("查看使用")
+//		//		判断是安卓机还是苹果机
+//		let useEquipment = ''; //使用的设备
+//		var ua = navigator.userAgent.toLowerCase();
+//		if(/iphone|ipad|ipod/.test(ua)) {
+//			console.log("iphone");
+//			useEquipment = 'iphone';
+//		} else if(/android/.test(ua)) {
+//			console.log("android");
+//			useEquipment = 'android';
+//		}
+//		let is_weixin_open = is_weixn();
+//		console.log("是否在微信打开" + is_weixin_open)
+//		if(useEquipment === "iphone") {
+//			var ifr = document.createElement('iframe');
+//	        ifr.src = 'com.baidu.tieba://';
+//	        ifr.style.display = 'none';
+//	        document.body.appendChild(ifr);
+//	        window.setTimeout(function(){
+//	            document.body.removeChild(ifr);
+//	        },3000)
+//
+//			
+////			var loadDateTime = new Date();
+////			window.setTimeout(function() {
+////					var timeOutDateTime = new Date();
+////					if(timeOutDateTime - loadDateTime < 5000) {
+////						window.location = "https://www.baidu.com/";
+////					} else {
+////						window.close();
+////					}
+////				},
+////				25);
+////			window.location = " apps custom url schemes ";
+//
+//
+//		} else if(useEquipment === "android" && is_weixin_open == "false") {
+//			var state = null;
+//			try {
+//				state = window.open("leyou://hytch", '_blank');
+//			} catch(e) {}
+//			if(state) {
+//				window.close();
+//			} else {
+//				window.location = "http://a.app.qq.com/o/simple.jsp?pkgname=gr eenjoy.golf.app&g_f=991653";
+//			}
+//			
+//		} else if(useEquipment === "android" && is_weixin_open == "true") {
+//			//Android
+//			window.location.href = "app://city_golf";//安卓协议，由安卓同事提供
+//			window.setTimeout(function() {
+//				window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=gr eenjoy.golf.app&g_f=991653"
+//			}, 2000)
+//			return
+//
+//		}
+//	}
 
 	//判断是否在微信里面打开
 	function is_weixn() {
@@ -105,6 +123,11 @@ var RelativesAndFriendsCard = (function() {
 		$(".closePage").on("click", function() {
 			console.log("关闭页面")
 		})
+		
+
+		
+		
+		
 	}
 
 	return {

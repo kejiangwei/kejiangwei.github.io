@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name='apple-itunes-app' content='app-id=477927812'>
-		<title>RelativesAndFriendsCard</title>
+		<title>领取亲友卡</title>
 
 		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
 		<link rel="stylesheet" href="css/common.css" />
@@ -23,21 +23,69 @@
 
 	<body>
 		<div class="RelativesAndFriendsCard">
-			<img class="bg-img" src="img/ft-bg.png" alt="背景图"/>
+			<img class="bg-img" src="img/ft-bg.png" alt="背景图" />
 			<div class="RelativesAndFriendsCardBox">
-					<ul>
-						<li class="boxContent"><span class="name" id="name"></span>送您一张方特亲友卡，您可凭此卡在一年内，免费游玩方特主题乐园，现在登录方特旅游APP即可使用。</li>
-						<li class="boxCard"><img src="img/ft-card.png" alt="亲友卡"/></li>
-						<li class="boxSubmit"><input type="button" class="button" value="查看使用" onclick="RelativesAndFriendsCard.seeUseMethod()" /></li>
-					</ul>
+				<ul>
+					<li class="boxContent"><span class="name" id="name"></span>送您一张方特亲友卡，您可凭此卡在一年内，免费游玩方特主题乐园，现在登录方特旅游APP即可使用。</li>
+					<li class="boxCard"><img src="img/ft-card.png" alt="亲友卡" /></li>
+					<li class="boxSubmit"><input type="button" class="button" value="查看使用" id="openApp" /></li>
+				</ul>
 			</div>
 		</div>
-		
-		
+
 		<script src="js/jquery-3.1.1.js"></script>
 		<script src="js/less.min.js"></script>
 		<script src="js/mui.min.js"></script>
 		<script src="js/RelativesAndFriendsCard.js"></script>
+		<script type="text/javascript">
+			document.getElementById('openApp').onclick = function(e) {
+				//ios
+				if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+
+					var browser = navigator.userAgent.toLowerCase();
+
+					if(browser.match(/micromessenger/i)) {
+						alert("苹果微信")
+						//微信内置浏览器
+						window.location.href = "hengtaixin://";
+						window.setTimeout(function() {
+							window.location.href = "https://itunes.apple.com/us/app/cheng-shi-gao-er-fu/id1008696844?mt=8&uo=4";
+						}, 1000)
+						return
+					} else {
+						alert("苹果浏览器")
+						window.location.href = "hengtaixin://"; //ios app协议，由ios同事提供
+						window.setTimeout(function() {
+							window.location.href = "https://itunes.apple.com/us/app/cheng-shi-gao-er-fu/id1008696844?mt=8&uo=4";
+						}, 2000)
+						return
+					}
+				}
+
+				if(navigator.userAgent.match(/android/i)) {
+					if(browser.match(/micromessenger/i)) {
+						alert("安卓微信")
+						//Android
+						window.location.href = "leyou://hytch"; //安卓协议，由安卓同事提供
+						window.setTimeout(function() {
+							window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=gr eenjoy.golf.app&g_f=991653"
+						}, 2000)
+						return
+					} else {
+						alert("安卓浏览器")
+						//Android
+						window.location.href = "leyou://hytch"; //安卓协议，由安卓同事提供
+						window.setTimeout(function() {
+							window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=gr eenjoy.golf.app&g_f=991653"
+						}, 2000)
+						return
+					}
+
+				}
+
+			};
+		</script>
+
 	</body>
 
 </html>
