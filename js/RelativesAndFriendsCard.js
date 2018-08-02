@@ -63,10 +63,10 @@ var RelativesAndFriendsCard = (function() {
 		//			屏幕PC端自适应处理
 		if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
 			console.log("iPhone")
-			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700","font-size":"15px"})
+			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700"})
 		} else if(navigator.userAgent.match(/android/i)) {
 			console.log("android")
-			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700","font-size":"15px"})
+			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700"})
 		}
 		if($(window).width()>400){
 			console.log("PC")
