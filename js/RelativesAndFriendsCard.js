@@ -66,7 +66,7 @@ var RelativesAndFriendsCard = (function() {
 			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700","font-size":"15px"})
 		} else if(navigator.userAgent.match(/android/i)) {
 			console.log("android")
-			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"600","font-size":"15px"})
+			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700","font-size":"15px"})
 		}
 		if($(window).width()>400){
 			console.log("PC")
