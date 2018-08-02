@@ -24,14 +24,12 @@ var RelativesAndFriendsCard = (function() {
 			"data": JSON.stringify(data)
 		}).done(function(response) {
 			console.log(response)
-			$("#name").text(response.data.shareUserName || '王*明')
+			$("#name").text(response.data.shareUserName)
 		}).fail(function(error) {
 			console.log(error)
-//			mui.toast('网络错误');
+			//			mui.toast('网络错误');
 		});
 	}
-
-
 
 	//判断是否在微信里面打开
 	function is_weixn() {
@@ -58,9 +56,22 @@ var RelativesAndFriendsCard = (function() {
 		sign = getUrlParms("sign"); //获取地址栏参数
 		getPageData()
 
-		$(".closePage").on("click", function() {
-			console.log("关闭页面")
-		})
+		//			根据安卓机和苹果机设置字体粗细
+		console.log($(window).height())
+		console.log($(window).width())
+		console.log(window.devicePixelRatio) //获取到当前设备的dpr
+		//			屏幕PC端自适应处理
+		if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+			console.log("iPhone")
+			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"700","font-size":"15px"})
+		} else if(navigator.userAgent.match(/android/i)) {
+			console.log("android")
+			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"600","font-size":"15px"})
+		}
+		if($(window).width()>400){
+			console.log("PC")
+			$(".RelativesAndFriendsCardBox ul li.boxContent").css({"font-weight":"600","font-size":"0.76rem"})
+		}
 	}
 
 	return {
@@ -71,11 +82,7 @@ var RelativesAndFriendsCard = (function() {
 window.onload = function() {
 	RelativesAndFriendsCard.OnLoadPage()
 }
-
-
-
-
-
+  
 //	function seeUseMethod() {
 //		console.log("查看使用")
 //		//		判断是安卓机还是苹果机

@@ -52,10 +52,11 @@
 	color: #333333;
 	text-indent: 1.8rem;
 	font-weight: 700;
-	font-size: 0.79rem;
+	font-size: 0.76rem;
 	font-family: "微软雅黑";
-	text-align:  center;
+	text-align: center;
 	letter-spacing: 2px;
+	line-height: 1rem;
 	/* white-space: unset; */
 }
 
@@ -65,7 +66,7 @@
 
 .RelativesAndFriendsCardBox ul li.boxCard {
 	width: 80%;
-	height: 11rem;
+	height: 10rem;
 	margin: 0rem 10%;
 	overflow: hidden;
 }
@@ -75,12 +76,12 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxSubmit {
-	    height: auto;
-    /*width: 100%;*/
-    /*margin-left: -2px;*/
-        overflow: hidden;
-        width: 76%;
-	margin-left: 12%;
+	height: auto;
+	width: 100%;
+	/*margin-left: -2px;*/
+	overflow: hidden;
+	/*width: 76%;*/
+	/*margin-left: 12%;*/
 }
 
 .RelativesAndFriendsCardBox ul li.boxSubmit input[type=button] {
@@ -109,7 +110,7 @@
 }
 
 .RelativesAndFriendsCardBox ul li.boxRule {
-	padding-top: 1rem;
+	padding-top: 0rem;
 	color: #999999;
 	width: 80%;
 	margin-left: 10%;
@@ -140,11 +141,32 @@
 	right: 0;
 }
 
+.RelativesAndFriendsCardBox ul li.boxRule ul {
+	height: 6rem;
+	width: 100%;
+	display: block;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule ul li:nth-child(1) {
+	height: 2.4rem;
+	width: 100%;
+	display: block;
+}
+
+.RelativesAndFriendsCardBox ul li.boxRule ul li:nth-child(2) {
+	height: 3.6rem;
+	width: 100%;
+	display: block;
+}
+
 .RelativesAndFriendsCardBox ul li.boxRule ul li span {
 	display: block;
 	float: left;
 	width: 10%;
 	text-align: left;
+	font-size: 0.7rem;
+	height: 100%;
+	line-height: 1rem;
 }
 
 .RelativesAndFriendsCardBox ul li.boxRule ul li p {
@@ -152,8 +174,12 @@
 	float: left;
 	width: 90%;
 	text-align: left;
+	font-size: 0.7rem;
+	letter-spacing: 1px;
+	line-height: 1rem;
 }
-.fixBottomYellow{
+
+.fixBottomYellow {
 	/* background: #facc28; */
 	width: 100%;
 	height: 0.6rem;
