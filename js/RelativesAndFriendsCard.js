@@ -24,7 +24,7 @@ var RelativesAndFriendsCard = (function() {
 			"data": JSON.stringify(data)
 		}).done(function(response) {
 			console.log(response)
-			$("#name").text(response.data.shareUserName)
+			$("#name").text(response.data.shareUserName || 王*)
 		}).fail(function(error) {
 			console.log(error)
 			//			mui.toast('网络错误');
